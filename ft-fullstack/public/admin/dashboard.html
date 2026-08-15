@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة التحكم | Future Technology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="admin-shell">
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="admin-side" id="adminSide">
+    <a href="/index.html" class="brand">
+      <div class="mono" style="width:36px;height:36px;">
+        <svg viewBox="0 0 40 40" style="width:20px;height:20px">
+          <path d="M6 8 H24 M6 8 V32 M6 19 H19" stroke="#FFFFFF" stroke-width="4.4" fill="none" stroke-linecap="square"/>
+          <path d="M20 8 L34 8 L26 16" stroke="#D4AF37" stroke-width="4" fill="none" stroke-linecap="square"/>
+          <path d="M22 24 H34 M28 24 V32" stroke="#14B8A6" stroke-width="4.4" fill="none" stroke-linecap="square"/>
+        </svg>
+      </div>
+      <div class="brand-text"><div class="name" style="font-size:14px">Admin Panel</div></div>
+    </a>
+    <button class="admin-nav-btn active" data-panel="brand">الهوية والشعار</button>
+    <button class="admin-nav-btn" data-panel="colors">الألوان</button>
+    <button class="admin-nav-btn" data-panel="hero">الرئيسية (Hero)</button>
+    <button class="admin-nav-btn" data-panel="about">من نحن</button>
+    <button class="admin-nav-btn" data-panel="vision">رؤيتنا</button>
+    <button class="admin-nav-btn" data-panel="services">الخدمات</button>
+    <button class="admin-nav-btn" data-panel="contact">تواصل معنا</button>
+    <button class="admin-nav-btn" data-panel="users">المستخدمون</button>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <h1>لوحة التحكم</h1>
+        <p class="desc">عدّل هوية الموقع وشعاره وألوانه ومحتواه من هنا — التعديلات تنعكس مباشرة على الموقع.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <span class="user-chip" id="userChip"></span>
+        <button class="logout-btn" id="logoutBtn">تسجيل الخروج</button>
+      </div>
+    </div>
+
+    <!-- ---------- BRAND & LOGO ---------- -->
+    <div class="admin-panel active" data-panel="brand">
+      <div class="card">
+        <h2>الشعار</h2>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div class="logo-preview" id="logoPreview"></div>
+          <div>
+            <input type="file" id="logoInput" accept="image/png,image/jpeg,image/svg+xml,image/webp">
+            <p style="color:var(--ink-faint);font-size:12px;margin-top:8px;">PNG, JPG, SVG أو WEBP — بحد أقصى 2MB</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>اسم العلامة التجارية</h2>
+        <div class="grid-2">
+          <div class="field-sm"><label>الاسم بالعربي</label><input id="brandNameAr"></div>
+          <div class="field-sm"><label>الاسم بالإنجليزي</label><input id="brandNameEn" style="direction:ltr;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------- COLORS ---------- -->
+    <div class="admin-panel" data-panel="colors">
+      <div class="card">
+        <h2>ألوان الهوية</h2>
+        <div class="color-row"><input type="color" id="colorNavy"><label>الخلفية الأساسية (Navy)</label><span class="hex" id="hexNavy"></span></div>
+        <div class="color-row"><input type="color" id="colorPanel"><label>خلفية البطاقات (Panel)</label><span class="hex" id="hexPanel"></span></div>
+        <div class="color-row"><input type="color" id="colorTeal"><label>اللون الأساسي (Teal)</label><span class="hex" id="hexTeal"></span></div>
+        <div class="color-row"><input type="color" id="colorGold"><label>اللون الثانوي (Gold)</label><span class="hex" id="hexGold"></span></div>
+        <div class="color-row"><input type="color" id="colorWhite"><label>لون النصوص (White)</label><span class="hex" id="hexWhite"></span></div>
+      </div>
+    </div>
+
+    <!-- ---------- HERO ---------- -->
+    <div class="admin-panel" data-panel="hero">
+      <div class="card">
+        <h2>عنوان الصفحة الرئيسية</h2>
+        <div class="field-sm"><label>العنوان (عربي) — يدعم &lt;span class="accent"&gt;&lt;/span&gt; و &lt;br&gt;</label><textarea id="heroTitleAr" rows="2"></textarea></div>
+        <div class="field-sm"><label>العنوان (إنجليزي)</label><textarea id="heroTitleEn" rows="2" style="direction:ltr;"></textarea></div>
+        <div class="field-sm"><label>الوصف (عربي)</label><textarea id="heroSubAr" rows="3"></textarea></div>
+        <div class="field-sm"><label>الوصف (إنجليزي)</label><textarea id="heroSubEn" rows="3" style="direction:ltr;"></textarea></div>
+      </div>
+      <div class="card">
+        <h2>الإحصائيات الثلاث</h2>
+        <div class="grid-2">
+          <div class="field-sm"><label>رقم 1 (عربي)</label><input id="stat1bAr"></div>
+          <div class="field-sm"><label>رقم 1 (إنجليزي)</label><input id="stat1bEn" style="direction:ltr;"></div>
+          <div class="field-sm"><label>وصف 1 (عربي)</label><input id="stat1sAr"></div>
+          <div class="field-sm"><label>وصف 1 (إنجليزي)</label><input id="stat1sEn" style="direction:ltr;"></div>
+          <div class="field-sm"><label>رقم 2</label><input id="stat2num" style="direction:ltr;"></div>
+          <div class="field-sm"><label>وصف 2 (عربي)</label><input id="stat2sAr"></div>
+          <div class="field-sm"><label>وصف 2 (إنجليزي)</label><input id="stat2sEn" style="direction:ltr;"></div>
+          <div class="field-sm"><label>رقم 3 (عربي)</label><input id="stat3bAr"></div>
+          <div class="field-sm"><label>رقم 3 (إنجليزي)</label><input id="stat3bEn" style="direction:ltr;"></div>
+          <div class="field-sm"><label>وصف 3 (عربي)</label><input id="stat3sAr"></div>
+          <div class="field-sm"><label>وصف 3 (إنجليزي)</label><input id="stat3sEn" style="direction:ltr;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------- ABOUT ---------- -->
+    <div class="admin-panel" data-panel="about">
+      <div class="card">
+        <h2>عنوان "من نحن"</h2>
+        <div class="field-sm"><label>العنوان (عربي) — يدعم HTML للألوان</label><textarea id="aboutTitleAr" rows="2"></textarea></div>
+        <div class="field-sm"><label>العنوان (إنجليزي)</label><textarea id="aboutTitleEn" rows="2" style="direction:ltr;"></textarea></div>
+        <div class="field-sm"><label>الفقرة الأولى (عربي)</label><textarea id="aboutP1Ar" rows="3"></textarea></div>
+        <div class="field-sm"><label>الفقرة الأولى (إنجليزي)</label><textarea id="aboutP1En" rows="3" style="direction:ltr;"></textarea></div>
+        <div class="field-sm"><label>الفقرة الثانية (عربي)</label><textarea id="aboutP2Ar" rows="3"></textarea></div>
+        <div class="field-sm"><label>الفقرة الثانية (إنجليزي)</label><textarea id="aboutP2En" rows="3" style="direction:ltr;"></textarea></div>
+      </div>
+      <div class="card">
+        <h2>خطوات العمل</h2>
+        <div id="stepsWrap"></div>
+      </div>
+    </div>
+
+    <!-- ---------- VISION ---------- -->
+    <div class="admin-panel" data-panel="vision">
+      <div class="card">
+        <h2>رؤيتنا</h2>
+        <div class="grid-2">
+          <div class="field-sm"><label>العنوان (عربي)</label><input id="visionTitleAr"></div>
+          <div class="field-sm"><label>العنوان (إنجليزي)</label><input id="visionTitleEn" style="direction:ltr;"></div>
+        </div>
+        <div class="field-sm"><label>النص (عربي)</label><textarea id="visionTextAr" rows="4"></textarea></div>
+        <div class="field-sm"><label>النص (إنجليزي)</label><textarea id="visionTextEn" rows="4" style="direction:ltr;"></textarea></div>
+      </div>
+    </div>
+
+    <!-- ---------- SERVICES ---------- -->
+    <div class="admin-panel" data-panel="services">
+      <div class="card">
+        <h2>الخدمات (بحد أقصى 7)</h2>
+        <div id="servicesWrap"></div>
+        <button class="btn btn-outline" id="addServiceBtn" type="button">+ إضافة خدمة</button>
+      </div>
+    </div>
+
+    <!-- ---------- CONTACT ---------- -->
+    <div class="admin-panel" data-panel="contact">
+      <div class="card">
+        <h2>قسم "تواصل معنا"</h2>
+        <div class="field-sm"><label>العنوان (عربي)</label><input id="contactTitleAr"></div>
+        <div class="field-sm"><label>العنوان (إنجليزي)</label><input id="contactTitleEn" style="direction:ltr;"></div>
+        <div class="field-sm"><label>الوصف (عربي)</label><textarea id="contactDescAr" rows="2"></textarea></div>
+        <div class="field-sm"><label>الوصف (إنجليزي)</label><textarea id="contactDescEn" rows="2" style="direction:ltr;"></textarea></div>
+      </div>
+      <div class="card">
+        <h2>بيانات التواصل</h2>
+        <div class="field-sm"><label>البريد الإلكتروني</label><input id="contactEmail" style="direction:ltr;"></div>
+        <div class="grid-2">
+          <div class="field-sm"><label>العنوان (عربي)</label><input id="contactAddressAr"></div>
+          <div class="field-sm"><label>العنوان (إنجليزي)</label><input id="contactAddressEn" style="direction:ltr;"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>واتساب</h2>
+        <div class="field-sm"><label>رقم الواتساب (بصيغة دولية بدون + — مثال: 9665XXXXXXXX)</label><input id="waNumber" style="direction:ltr;"></div>
+        <div class="field-sm"><label>رسالة البدء (عربي)</label><textarea id="waMsgAr" rows="2"></textarea></div>
+        <div class="field-sm"><label>رسالة البدء (إنجليزي)</label><textarea id="waMsgEn" rows="2" style="direction:ltr;"></textarea></div>
+      </div>
+    </div>
+
+    <!-- ---------- USERS ---------- -->
+    <div class="admin-panel" data-panel="users">
+      <div class="card">
+        <h2>المستخدمون المسجّلون</h2>
+        <table class="table">
+          <thead>
+            <tr><th>الاسم</th><th>البريد الإلكتروني</th><th>الصلاحية</th><th>تاريخ التسجيل</th></tr>
+          </thead>
+          <tbody id="usersTbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ---------- SAVE BAR ---------- -->
+    <div class="save-bar">
+      <span id="saveStatus" style="color:var(--ink-faint);font-size:13px;"></span>
+      <button class="btn btn-primary" id="saveBtn">حفظ التغييرات</button>
+    </div>
+  </main>
+</div>
+
+<script src="/js/admin.js"></script>
+</body>
+</html>

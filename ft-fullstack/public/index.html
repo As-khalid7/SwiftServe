@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Technology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header>
+  <div class="navbar">
+    <a href="#top" class="brand">
+      <div class="mono js-logo-slot"></div>
+      <div class="brand-text"><div class="name js-brand-name">Future Technology</div></div>
+    </a>
+    <div class="nav-right">
+      <div class="lang-switch">
+        <span data-lang-opt="ar" class="active">AR</span>
+        <span data-lang-opt="en">EN</span>
+      </div>
+      <button class="burger" id="burgerBtn" aria-label="القائمة">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ SIDE MENU ============ -->
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose" aria-label="إغلاق">✕</button>
+  <div id="menuAuthSlot"></div>
+  <a href="#about" id="menuAbout">من نحن</a>
+  <a href="#vision" id="menuVision">رؤيتنا</a>
+  <a href="#contact" id="menuContact">تواصل معنا</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <svg class="circuit" style="top:0;right:0;width:340px;height:340px" viewBox="0 0 340 340">
+    <path d="M340 0 L260 0 L260 60 L200 60 L200 110" />
+    <path d="M340 40 L300 40 L300 130 L230 130" />
+    <path d="M340 90 L320 90 L320 180" />
+    <circle cx="260" cy="60" r="3.2"/><circle cx="200" cy="110" r="3.2"/>
+    <circle cx="300" cy="130" r="3.2"/><circle cx="230" cy="130" r="3.2"/>
+  </svg>
+  <svg class="circuit gold" style="bottom:0;left:0;width:300px;height:300px" viewBox="0 0 300 300">
+    <path d="M0 300 L90 300 L90 230 L150 230 L150 190" />
+    <path d="M0 260 L50 260 L50 170 L120 170" />
+    <circle cx="90" cy="230" r="3"/><circle cx="150" cy="190" r="3"/><circle cx="50" cy="170" r="3"/>
+  </svg>
+
+  <span class="eyebrow hero-eyebrow">BRAND · IT CONSULTING</span>
+  <h1 id="heroTitle"></h1>
+  <div class="hero-rule"></div>
+  <p class="sub" id="heroSub"></p>
+
+  <div class="hero-stats">
+    <div class="stat"><b id="stat1b"></b><span id="stat1s"></span></div>
+    <div class="stat"><b id="stat2num"></b><span id="stat2s"></span></div>
+    <div class="stat"><b id="stat3b"></b><span id="stat3s"></span></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <span class="eyebrow">WHO WE ARE</span>
+      <h2 id="aboutTitle"></h2>
+      <p id="aboutP1"></p>
+      <p id="aboutP2"></p>
+    </div>
+    <div class="about-visual" id="aboutSteps"></div>
+  </div>
+</section>
+
+<!-- ============ VISION ============ -->
+<section id="vision">
+  <div class="wrap">
+    <div class="vision-box">
+      <svg class="circuit gold" style="top:-30px;right:-30px;width:200px;height:200px" viewBox="0 0 200 200">
+        <path d="M200 0 L140 0 L140 50 L90 50"/>
+        <circle cx="140" cy="50" r="3"/><circle cx="90" cy="50" r="3"/>
+      </svg>
+      <span class="eyebrow">OUR VISION</span>
+      <h2 id="visionTitle"></h2>
+      <p id="visionText"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">OUR MISSION</span>
+      <h2 data-static-ar="استشارات وتخطيط تقني للمنشآت الناشئة" data-static-en="IT Consulting & Planning for Startups" id="servicesTitle">استشارات وتخطيط تقني للمنشآت الناشئة</h2>
+    </div>
+    <div class="svc-grid" id="svcGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-panel">
+      <svg class="circuit" style="bottom:-40px;left:-40px;width:260px;height:260px" viewBox="0 0 260 260">
+        <path d="M0 260 L70 260 L70 200 L120 200"/>
+        <path d="M0 220 L40 220 L40 150"/>
+        <circle cx="70" cy="200" r="3"/><circle cx="40" cy="150" r="3"/>
+      </svg>
+      <div style="position:relative;z-index:1">
+        <span class="eyebrow">GET IN TOUCH</span>
+        <h2 id="contactTitle"></h2>
+        <p id="contactDesc"></p>
+        <div class="contact-methods">
+          <div class="cmethod">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 6 9 6 9-6M3 6h18v12H3V6Z"/></svg></span>
+            <span id="contactEmail"></span>
+          </div>
+          <div class="cmethod">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0Z"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg></span>
+            <span id="contactAddress"></span>
+          </div>
+        </div>
+      </div>
+      <div class="wa-box" style="position:relative;z-index:1">
+        <div class="wa-icon"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.77.46 3.45 1.34 4.94L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.19c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.81-.11a16.7 16.7 0 0 1-1.63-.6c-2.87-1.24-4.74-4.14-4.89-4.33-.14-.19-1.17-1.56-1.17-2.98s.73-2.11 1-2.4c.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .89 2.15.07.14.11.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.13-.29.28-.13.55.17.28.75 1.24 1.62 2 1.11.99 2.05 1.3 2.33 1.44.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.26.14.44.2.5.32.07.12.07.68-.17 1.36Z"/></svg></div>
+        <h3 data-static-ar="ابدأ استشارتك الأولى" data-static-en="Start your first consultation" id="waBoxTitle">ابدأ استشارتك الأولى</h3>
+        <a href="#" class="btn btn-primary js-wa-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.77.46 3.45 1.34 4.94L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Z"/></svg>
+          <span data-static-ar="تواصل واتساب" data-static-en="Chat on WhatsApp" id="waBoxBtn">تواصل واتساب</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <svg class="circuit gold" style="top:0;right:0;width:220px;height:160px" viewBox="0 0 220 160">
+    <path d="M220 0 L160 0 L160 50 L110 50"/>
+    <circle cx="160" cy="50" r="3"/><circle cx="110" cy="50" r="3"/>
+  </svg>
+  <div class="wrap foot-inner">
+    <div class="brand">
+      <div class="mono js-logo-slot" style="width:36px;height:36px;"></div>
+      <div class="brand-text"><div class="name js-brand-name" style="font-size:14.5px"></div></div>
+    </div>
+    <div class="foot-links">
+      <a href="#about" id="footAbout">من نحن</a>
+      <a href="#vision" id="footVision">رؤيتنا</a>
+      <a href="#contact" id="footContact">تواصل معنا</a>
+    </div>
+    <div class="copyright">© 2026 Future Technology — All rights reserved</div>
+  </div>
+</footer>
+
+<!-- WhatsApp floating button -->
+<a href="#" class="wa-float js-wa-link" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+  <span class="pulse"></span>
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.77.46 3.45 1.34 4.94L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.19c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.81-.11a16.7 16.7 0 0 1-1.63-.6c-2.87-1.24-4.74-4.14-4.89-4.33-.14-.19-1.17-1.56-1.17-2.98s.73-2.11 1-2.4c.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .89 2.15.07.14.11.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.13-.29.28-.13.55.17.28.75 1.24 1.62 2 1.11.99 2.05 1.3 2.33 1.44.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.26.14.44.2.5.32.07.12.07.68-.17 1.36Z"/></svg>
+</a>
+
+<script src="/js/site.js"></script>
+<script>
+  // small extra strings not covered by the content API structure
+  document.addEventListener("DOMContentLoaded", () => {
+    const applyStatic = () => {
+      const lang = localStorage.getItem("ft_lang") || "ar";
+      document.querySelectorAll("[data-static-ar]").forEach((n) => {
+        n.textContent = lang === "ar" ? n.getAttribute("data-static-ar") : n.getAttribute("data-static-en");
+      });
+    };
+    applyStatic();
+    document.querySelectorAll("[data-lang-opt]").forEach((btn) =>
+      btn.addEventListener("click", () => setTimeout(applyStatic, 0))
+    );
+  });
+</script>
+</body>
+</html>
